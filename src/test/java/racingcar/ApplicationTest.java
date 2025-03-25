@@ -3,6 +3,8 @@ package racingcar;
 import camp.nextstep.edu.missionutils.test.NsTest;
 import org.junit.jupiter.api.Test;
 
+import camp.nextstep.edu.missionutils.Randoms;
+
 import static camp.nextstep.edu.missionutils.test.Assertions.assertRandomNumberInRangeTest;
 import static camp.nextstep.edu.missionutils.test.Assertions.assertSimpleTest;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -35,4 +37,24 @@ class ApplicationTest extends NsTest {
     public void runMain() {
         Application.main(new String[]{});
     }
+}
+
+public class car {
+    private String name;
+    private String position;
+
+    public car(String name){
+        this.name = name;
+        int position = 0;
+    }
+   
+    private int ran() {
+    return Randoms.pickNumberInRange(0, 9);
+    }
+
+    public void move(){
+        if(ran() >= 4){position += 1;}
+    }
+    public String getname(){return name;}
+
 }
