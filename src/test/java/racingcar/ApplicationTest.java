@@ -39,22 +39,22 @@ class ApplicationTest extends NsTest {
     }
 }
 
-public class car {
+class car {
     private String name;
-    private String position;
+    private int position;
 
-    public car(String name){
+    car(String name){
         this.name = name;
-        int position = 0;
+        this.position = 0;
     }
    
     private int ran() {
     return Randoms.pickNumberInRange(0, 9);
     }
 
-    public void move(){
+    void move(){
         if(ran() >= 4){position += 1;}
     }
-    public String getname(){return name;}
+    String getname(){return name;}
 
 }
